@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FirstClaudeTest - Tetris</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+  <div class="board-wrap">
+    <canvas id="board" width="300" height="600"></canvas>
+    <div id="startOverlay" class="overlay">
+      <h1>TETRIS</h1>
+      <p>Arrows: move / rotate<br>Down: soft drop &nbsp; Space: hard drop<br>P: pause &nbsp; Enter: start</p>
+      <p class="hint">Press Enter to start</p>
+    </div>
+    <div id="pauseOverlay" class="overlay hidden">
+      <h1>PAUSED</h1>
+      <p class="hint">Press P to resume</p>
+    </div>
+    <div id="gameOverOverlay" class="overlay hidden">
+      <h1>GAME OVER</h1>
+      <p id="finalScore"></p>
+      <p class="hint">Press Enter to restart</p>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="panel">
+      <h2>Next</h2>
+      <canvas id="next" width="96" height="96"></canvas>
+    </div>
+    <div class="panel">
+      <h2>Score</h2>
+      <div id="score">0</div>
+    </div>
+    <div class="panel">
+      <h2>Level</h2>
+      <div id="level">1</div>
+    </div>
+    <div class="panel">
+      <h2>Lines</h2>
+      <div id="lines">0</div>
+    </div>
+  </div>
+</div>
+<script src="js/pieces.js"></script>
+<script src="js/board.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
