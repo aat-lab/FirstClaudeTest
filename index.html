@@ -2,26 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>FirstClaudeTest - Tetris</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="app">
 <div id="game">
   <div class="board-wrap">
     <canvas id="board" width="300" height="600"></canvas>
     <div id="startOverlay" class="overlay">
       <h1>TETRIS</h1>
-      <p>Arrows: move / rotate<br>Down: soft drop &nbsp; Space: hard drop<br>P: pause &nbsp; Enter: start</p>
-      <p class="hint">Press Enter to start</p>
+      <p>Arrows or buttons: move / rotate<br>Down/Drop: soft &amp; hard drop<br>P: pause &nbsp; Enter/Start: begin</p>
+      <p class="hint">Press Enter or tap Start</p>
     </div>
     <div id="pauseOverlay" class="overlay hidden">
       <h1>PAUSED</h1>
-      <p class="hint">Press P to resume</p>
+      <p class="hint">Press P or tap Pause to resume</p>
     </div>
     <div id="gameOverOverlay" class="overlay hidden">
       <h1>GAME OVER</h1>
       <p id="finalScore"></p>
-      <p class="hint">Press Enter to restart</p>
+      <p class="hint">Press Enter or tap Start to restart</p>
     </div>
   </div>
   <div class="sidebar">
@@ -42,6 +44,20 @@
       <div id="lines">0</div>
     </div>
   </div>
+</div>
+<div id="touchControls">
+  <button id="btnRotate" class="ctrl-btn wide" type="button">⟳ Rotate</button>
+  <div class="ctrl-row">
+    <button id="btnLeft" class="ctrl-btn" type="button">◀</button>
+    <button id="btnSoftDrop" class="ctrl-btn" type="button">▼</button>
+    <button id="btnRight" class="ctrl-btn" type="button">▶</button>
+  </div>
+  <div class="ctrl-row">
+    <button id="btnHardDrop" class="ctrl-btn" type="button">⤓ Drop</button>
+    <button id="btnPause" class="ctrl-btn" type="button">⏸ Pause</button>
+    <button id="btnStart" class="ctrl-btn" type="button">▶ Start</button>
+  </div>
+</div>
 </div>
 <script src="js/pieces.js"></script>
 <script src="js/board.js"></script>
